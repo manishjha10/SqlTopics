@@ -102,4 +102,9 @@ LIMIT / OFFSET
 
 
 
+//////////////////////////////////////////////// 
+#Question  
+
+View:  A view is a virtual table created from a query.
+
 
