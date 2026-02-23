@@ -106,5 +106,13 @@ LIMIT / OFFSET
 #Question  
 
 View:  A view is a virtual table created from a query.
+permanently rename table:
+ALTER TABLE employees_details
+RENAME TO employee_detail;
+
+Temporary Rename use As Alice
+SELECT *
+FROM employees_details AS employee_detail;
+
 
 
