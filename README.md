@@ -147,7 +147,37 @@ Partitioning → splitting large table
 Execution Plan → how database runs query
 
 
-1Nf  No duplicate groups
+
+
+# ACID Properties (Very Important for Interview)
+ACID ensures safe and reliable transactions in a database.
+
+1️⃣ Atomicity
+👉 All or nothing
+If one query fails, the whole transaction fails.
+Example:
+Money transfer –
+If ₹1000 is deducted but not added → transaction fails completely.
+
+2️⃣ Consistency
+👉 Database always moves from one valid state to another.
+Rules, constraints, and integrity must be maintained.
+
+3️⃣ Isolation
+👉 Multiple transactions should not disturb each other.
+If two users transfer money at same time, they should not see half-done results.
+
+4️⃣ Durability
+👉 Once transaction is committed, it is permanently saved.
+Even if system crashes, data remains safe.
+
+🎯 Easy Trick to Remember:
+A → All or nothing
+C → Correct state
+I → Independent transactions
+D → Data permanent
+
+
 2Nf  No partical dependency
 3Nf No transetive dependecy. 
 
