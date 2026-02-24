@@ -114,5 +114,40 @@ Temporary Rename use As Alice
 SELECT *
 FROM employees_details AS employee_detail;
 
+# Window Function (Easy Meaning)
+“Window functions perform calculations across rows without grouping them, and RANK assigns ranking based on column values.”
+Easy Difference:
 
+ROW_NUMBER() → Always unique number
+RANK() → Same rank for same values (skips next)
+DENSE_RANK() → Same rank but no skipping
+
+✅ What is RANK() ?
+👉 RANK() gives ranking based on a column value.
+Example:
+If salaries are:
+Salary
+10000
+9000
+9000
+8000
+
+Using RANK():
+Salary	Rank
+10000	1
+9000	2
+9000	2
+8000	4
+
+
+Cursor → row-by-row processing
+Temp Table → temporary storage
+SQL Injection → security attack
+Partitioning → splitting large table
+Execution Plan → how database runs query
+
+
+1Nf  No duplicate groups
+2Nf  No partical dependency
+3Nf No transetive dependecy. 
 
