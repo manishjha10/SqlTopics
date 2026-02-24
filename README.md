@@ -25,7 +25,7 @@ Views
 
 Stored Procedures
 
-Triggers
+Triggers :  It executes when the DMl command rund(Insert, update, delete) .
 
 Transactions (ACID properties)
 
@@ -181,4 +181,135 @@ C → Correct state
 I → Independent transactions
 D → Data permanent
 
+# Index Related ... 
+1️⃣ What is an Index?
+Answer:
+“Index is a database object that improves query performance by reducing data search time.”
 
+2️⃣ Why do we use Index?
+Answer:
+“To speed up SELECT queries, especially on large tables.”
+
+3️⃣ How does Index improve performance?
+Answer:
+“It avoids full table scan and directly locates required rows using a data structure like B-Tree.”
+
+3️⃣ How does Index improve performance?
+Answer:
+“It avoids full table scan and directly locates required rows using a data structure like B-Tree.”
+
+5️⃣ Can we create index on multiple columns?
+Answer:
+“Yes. It is called Composite Index.”
+
+
+6️⃣ Types of Index in SQL?
+Clustered Index
+Non-Clustered Index
+Composite Index
+Unique Index
+
+7️⃣ Difference between Clustered and Non-Clustered Index?
+Clustered:
+Data physically sorted
+Only one per table
+
+Non-Clustered:
+Separate structure
+Multiple allowed
+
+
+1️⃣1️⃣ What is Cardinality?
+Answer:
+“Number of unique values in a column.”
+High cardinality → Good for index.
+
+1️⃣2️⃣ What is Index Selectivity?
+Answer:
+“How efficiently index filters rows.”
+
+
+Q: Why is my query slow even after creating index?
+Possible reasons:
+Wrong column indexed
+Function used on indexed column
+Low selectivity
+Not using proper WHERE condition
+
+
+
+1️⃣ Clustered Index
+✅ Meaning:
+
+Data in table is physically stored in sorted order based on index column.
+
+👉 Table data itself is arranged.
+
+Important Points:
+
+Only one clustered index per table
+
+Usually created automatically on Primary Key
+
+Interview Line:
+
+“Clustered index defines the physical order of data in the table.”
+
+
+2️⃣ Non-Clustered Index
+✅ Meaning:
+
+It creates a separate structure that stores column values + pointer to actual data.
+
+👉 Table data is NOT physically changed.
+
+Important Points:
+
+Multiple non-clustered indexes allowed
+
+Improves SELECT performance
+
+Interview Line:
+
+“Non-clustered index stores indexed values separately with reference to actual table rows.”
+
+
+
+3️⃣ Unique Index
+✅ Meaning:
+
+Does not allow duplicate values in a column.
+
+👉 Ensures uniqueness.
+
+Example:
+
+Email column.
+
+Interview Line:
+
+“Unique index enforces unique values in indexed column.”
+
+
+4️⃣ Composite Index
+✅ Meaning:
+
+Index created on multiple columns together.
+
+Example:
+(first_name, last_name)
+
+Interview Line:
+
+“Composite index improves performance when query filters multiple columns.”
+
+5️⃣ Full-Text Index
+✅ Meaning:
+
+Used for searching words inside large text data.
+
+Example:
+Searching in description column.
+
+#
+“Indexes improve query performance. Clustered index stores data physically sorted and only one is allowed per table. Non-clustered index stores values separately and multiple can be created. We also have unique and composite indexes based on requirements.”
