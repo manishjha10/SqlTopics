@@ -114,6 +114,10 @@ Temporary Rename use As Alice
 SELECT *
 FROM employees_details AS employee_detail;
 
+1 Nf= No duplicate groups
+2 Nf= No partial dependency
+2 Nf= No transitive dependecy
+
 # Window Function (Easy Meaning)
 “Window functions perform calculations across rows without grouping them, and RANK assigns ranking based on column values.”
 Easy Difference:
@@ -177,7 +181,4 @@ C → Correct state
 I → Independent transactions
 D → Data permanent
 
-
-2Nf  No partical dependency
-3Nf No transetive dependecy. 
 
